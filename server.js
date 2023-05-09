@@ -8,9 +8,10 @@ app.use(bodyparser.urlencoded({extended:true}))
 app.use(bodyparser.json())
 app.use(cors({origin: ["https://localhost:5000","https://weather-app-api-1aiy.onrender.com"]}));
 app.use((req, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', ['http://localhost:3000','https://weather-app-li07.onrender.com/']);
+    res.setHeader('Access-Control-Allow-Origin', 'https://weather-app-li07.onrender.com/');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+   // res.setHeader('Access-Control-Allow-Origin', ['http://localhost:3000','https://weather-app-li07.onrender.com/']);
     next();
   });
   
